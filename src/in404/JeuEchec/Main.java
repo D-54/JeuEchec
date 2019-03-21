@@ -17,13 +17,11 @@ enum Main {
      * @param args void
      */
     public void run(String[] args) {
-        ArrayList plateau = new ArrayList<Piece>();
-        Piece Fou_1 = new Fou(new Point(1,3),"blanc","Fou_1");
-        Plateau p1 = new Plateau();
-        plateau.add(Fou_1);
-        Point point = new Point(5,4);
-        Fou_1.movePiece(point);
-        System.out.println(Fou_1);
+
+        Plateau plateau = new Plateau();
+        Piece Roi_1 = new Roi(new Point(1,6),"blanc","Roi1");
+        plateau.addPiece(Roi_1);
+        System.out.println(Roi_1);
     }
 
     /*

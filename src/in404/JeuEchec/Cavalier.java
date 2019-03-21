@@ -26,6 +26,8 @@ public class Cavalier extends Piece {
     public String toString() {
         return p + "; " + couleur + "; " +name;
     }
+
+    @Override
     public void movePiece(Point point){
         p = point;
     }

@@ -27,6 +27,7 @@ public class Fou extends Piece {
     public String toString() {
         return p + "; " + couleur + "; " +name;
     }
+
     public void movePiece(Point point){
         p = point;
     }
