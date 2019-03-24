@@ -25,10 +25,13 @@ public class Reine extends Piece {
     }
     @Override
     public String toString() {
-        return p + "; " + couleur + "; " +name;
+        return name;
     }
     @Override
-    public void movePiece(Point point){
-        p = point;
+    public boolean movePossible(Point pointPosition,Point pointTarget){
+        if((pointPosition.getX() == pointTarget.getX() || pointPosition.getY() == pointTarget.getY()) || Math.abs(pointPosition.getX()-pointTarget.getX()) == Math.abs(pointPosition.getY()-pointTarget.getY())){
+            return true;
+        }
+        return false;
     }
 }

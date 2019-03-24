@@ -21,7 +21,7 @@ public class Plateau {
         for (int i = 0; i < 7; i++){
             for (int j = 0; j < 7; j++){
                 if(this.plateau[i][j] != null)
-                    System.out.print(this.plateau[i][j]);
+                    System.out.print("[" + this.plateau[i][j] + "]");
                 else
                     System.out.print("[void]");
             }
@@ -41,5 +41,14 @@ public class Plateau {
         if(this.plateau[x][y] == null)
             return null;
         return this.plateau[x][y];
+    }
+
+    public boolean movePiece(Point point,Piece piece){
+        if(this.plateau[point.getX()][point.getY()]== null && piece.movePossible(point,piece.getPosition())==true){
+            this.plateau[piece.getPosition().getX()][piece.getPosition().getY()] = null;
+            this.plateau[point.getX()][point.getY()] = piece;
+            return true;
+        }
+        return false;
     }
 }

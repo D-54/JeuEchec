@@ -18,8 +18,8 @@ enum Main {
 
         //Initialisation du plateau
         Plateau p1 = new Plateau();
-        Piece fou1 = new Fou(new Point(4,5),"Blanc","Fou1");
-        Piece tour1 = new Tour(new Point(5,5),"Noir","Tour1");
+        Piece fou1 = new Fou(new Point(4, 5), "Blanc", "Fou1");
+        Piece tour1 = new Tour(new Point(5, 5), "Noir", "Tour1");
 
         p1.addPiece(fou1);
         p1.addPiece(tour1);
@@ -27,14 +27,25 @@ enum Main {
         p1.Afficher();
 
         //Lecture du clavier
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Veuillez saisir les coordonnées:");
-        String str = sc.nextLine();
-        int x = str.charAt(0);
-        int y = str.charAt(1);
-        System.out.println(p1.setPiece(x-'a',y-'0'));
-
-
+        int x;
+        int y;
+        int xTarget;
+        int yTarget;
+        do{
+            do {
+                Scanner sc = new Scanner(System.in);
+                System.out.println("Veuillez saisir les coordonnées:");
+                String str = sc.nextLine();
+                x = str.charAt(0);
+                y = str.charAt(1);
+                System.out.println(p1.setPiece(x - 'a', y - '0'));
+            } while (p1.setPiece(x - 'a', y - '0') == null);
+            Scanner sc = new Scanner(System.in);
+            String str = sc.nextLine();
+            xTarget = str.charAt(0);
+            yTarget = str.charAt(1);
+        }while(p1.movePiece(new Point(xTarget -'a',yTarget-'0'),p1.setPiece(x-'a',y-'0')) == false);
+        p1.Afficher();
     }
 
     /*
