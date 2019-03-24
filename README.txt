@@ -5,20 +5,17 @@ voici l'organisation du projet:
 -----------------------------------------------------------------------------------------------------------| 
 |Package JeuEchec
 |
-|                MAIN                            POINT
-|                    \
-|                      \
-|                     PLATEAU
-|                        o
-|                        |
-|                        |
-|                   ABSTRACT PIECE
-|                    o o  oo o o
-|                   /  /  /\  \  \
-|                 /  /   /  \  \   \
-|               /  /    /    \   \   \
-|           /   /    /         \    \   \
-|       ROI  REINE CAVALIER  PION  FOU TOUR
+|   MAIN              PLATEAU                         POINT             
+|                   o     o    o
+|                 /       |      \
+|              /          |         \
+|      LECTUREFICHIER  ABST-PIECE   PILE 
+|                     o o  oo o o
+|                   /  /  / \  \  \
+|                 /  /   /   \  \   \
+|               /   /   /     \   \   \
+|            /   /     /        \    \   \
+|         ROI  REINE CAVALIER  PION  FOU TOUR
 |
 ------------------------------------------------------------------------------------------------------------|
                
