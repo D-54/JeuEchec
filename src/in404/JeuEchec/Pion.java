@@ -25,9 +25,13 @@ public class Pion {
     }
     @Override
     public String toString() {
-        return p + "; " + couleur + "; " +name;
+        return name;
     }
-    public void movePiece(Point point){
-        p = point;
+    public boolean movePossible(Point pointPosition,Point pointTarget){
+        if((pointPosition.getY() + 1 == pointPosition.getY()) && (pointPosition.getX() == pointPosition.getX())){
+            return true;
+        }
+        return false;
+
     }
 }
