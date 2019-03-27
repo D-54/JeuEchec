@@ -75,7 +75,7 @@ public class Plateau {
 
     public boolean movePiece(Point pointPosition,Point pointTarget){
         Piece p = this.plateau[pointPosition.getX()][pointPosition.getY()];
-        if(p.movePossible(pointPosition,pointTarget) == true){
+        if(p.movePossible(pointPosition,pointTarget) == true && this.plateau[pointTarget.getX()][pointTarget.getY()] == null){
             this.plateau[pointPosition.getX()][pointPosition.getY()] = null;
             this.plateau[pointTarget.getX()][pointTarget.getY()] = p;
             return true;
