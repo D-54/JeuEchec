@@ -38,12 +38,12 @@ enum Main {
                     y = str.charAt(1);
                     System.out.println(p1.setPiece(x - 'a', y - '1'));
                 } while (p1.setPiece(x - 'a', y - '1') == null);
+            do {
                 Scanner sc = new Scanner(System.in);
                 String str = sc.nextLine();
                 xTarget = str.charAt(0);
                 yTarget = str.charAt(1);
-                System.out.println(p1.setPiece(x - 'a', y - '1').getPosition().getY());
-                p1.movePiece(new Point(xTarget - 'a', yTarget - '1'), p1.setPiece(x - 'a', y - '1'));
+            }while (p1.movePiece(new Point(x-'a',y-'1'),new Point(xTarget - 'a', yTarget - '1')) != true);
             p1.Afficher();
         }
     }

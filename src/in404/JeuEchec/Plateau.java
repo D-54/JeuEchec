@@ -73,12 +73,13 @@ public class Plateau {
         return this.plateau[x][y];
     }
 
-    public boolean movePiece(Point point,Piece piece){
-        System.out.println(piece.getPosition().getY());
-        this.plateau[piece.getPosition().getX()][piece.getPosition().getY()] = null;
-        this.Afficher();
-        System.out.println(piece);
-        this.plateau[point.getX()][point.getY()] = piece;
-        return true;
+    public boolean movePiece(Point pointPosition,Point pointTarget){
+        Piece p = this.plateau[pointPosition.getX()][pointPosition.getY()];
+        if(p.movePossible(pointPosition,pointTarget) == true){
+            this.plateau[pointPosition.getX()][pointPosition.getY()] = null;
+            this.plateau[pointTarget.getX()][pointTarget.getY()] = p;
+            return true;
+        }
+        return false;
     }
 }
