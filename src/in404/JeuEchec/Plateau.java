@@ -65,12 +65,24 @@ public class Plateau {
         this.plateau[piece.getPosition().getX()][piece.getPosition().getY()] = piece;
     }
 
+    /**
+     * Permet de récupérer la pièce à une coordonnées données en entrée
+     * @param x coordonnées en abscisse
+     * @param y coordonées en ordonnées
+     * @return La pièce à l'endroit du plateau
+     */
     public Piece getPiece(int x, int y){
         if(this.plateau[x][y] == null)
             return null;
         return this.plateau[x][y];
     }
 
+    /**
+     * Permet de Bouger une pièce
+     * @param pointPosition Position de pièce
+     * @param pointTarget Position de la l'endroit ou l'on veut placer la pièce
+     * @return booléens, si la pièce est bien placer
+     */
     public boolean movePiece(Point pointPosition,Point pointTarget){
         Piece p = this.plateau[pointPosition.getX()][pointPosition.getY()];
         if(p.movePossible(pointPosition,pointTarget) == true && this.plateau[pointTarget.getX()][pointTarget.getY()] == null){
