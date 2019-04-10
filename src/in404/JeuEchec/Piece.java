@@ -1,6 +1,13 @@
 package in404.JeuEchec;
 
-public abstract class Piece extends Plateau {
+public abstract class Piece {
+    private Point point;
+    private String couleur;
+
+    public Piece(Point point, String couleur) {
+        this.point = point;
+        this.couleur = couleur;
+    }
     /**
      * Redefinition de méthode toString
      * @return le nom de chaque sous classe soit le Fou,Cavalier,Roi,Reine,Tour.
@@ -23,5 +30,10 @@ public abstract class Piece extends Plateau {
      * Donne la position de la piece
      * @return la position de la piece
      */
-    public abstract Point getPosition();
+    public Point getPosition(){
+        return point;
+    }
+    public String getCouleur(){
+        return couleur;
+    }
 }

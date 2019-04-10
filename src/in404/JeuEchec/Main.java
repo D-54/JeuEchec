@@ -36,8 +36,8 @@ enum Main {
                     String str = sc.nextLine();
                     x = str.charAt(0);
                     y = str.charAt(1);
-                    System.out.println(p1.setPiece(x - 'a', y - '1'));
-                } while (p1.setPiece(x - 'a', y - '1') == null);
+                    System.out.println(p1.getPiece(x - 'a', y - '1'));
+                } while (p1.getPiece(x - 'a', y - '1') == null);
             do {
                 System.out.println("Veuillez saisir les coordonnées cible:");
                 Scanner sc = new Scanner(System.in);

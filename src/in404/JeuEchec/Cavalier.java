@@ -2,29 +2,14 @@ package in404.JeuEchec;
 
 public class Cavalier extends Piece {
 
-    private Point p;
-    private String couleur;
-    private String name;
 
-    public Cavalier(Point p,String couleur,String name){
-        this.p = p;
-        this.couleur = couleur;
-        this.name = name;
+    public Cavalier(Point point,String couleur){
+        super(point,couleur);
     }
 
-    public Point getPosition(){
-        return p;
-    }
-
-    public String getCouleur(){
-        return couleur;
-    }
-    public String getName(){
-        return name;
-    }
     @Override
     public String toString() {
-        return name;
+        return "CAVALI";
     }
 
     @Override
