@@ -2,7 +2,11 @@ package in404.JeuEchec;
 
 public class Cavalier extends Piece {
 
-
+    /**
+     * Constructeur de la Pièce Cavalier
+     * @param point coordonnées initiale de pièce
+     * @param couleur indique l'équipe auquelle apartient la pièce
+     */
     public Cavalier(Point point,String couleur){
         super(point,couleur);
     }
