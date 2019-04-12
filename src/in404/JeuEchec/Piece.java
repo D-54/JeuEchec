@@ -53,7 +53,7 @@ public abstract class Piece {
      * Donne l'ensemble des déplacement possible pour une pièce
      * @return l'ensemble des coordonées, to string définie dans la fonction Point
      */
-    public ArrayList getArray(){
+    public ArrayList<Point> getArray(){
         return move;
     }
 

@@ -10,7 +10,9 @@ import java.util.Scanner;
 enum Main {
     ENVIRONNEMENT;
 
-    /*
+    private Scanner sc;
+
+	/*
      * Méthode principale du programme.
      * @param args void
      */
@@ -24,14 +26,14 @@ enum Main {
 
         p1.Afficher();
 
-
+        sc = new Scanner(System.in);
+        int x;
+        int y;
+        int xTarget;
+        int yTarget;
+       
         //Lecture du clavier
         while (true) {
-            int x;
-            int y;
-            int xTarget;
-            int yTarget;
-            Scanner sc = new Scanner(System.in);
             do {
                     System.out.println("Veuillez saisir les coordonnées position:");
                     String str = sc.nextLine();
@@ -45,9 +47,9 @@ enum Main {
                 xTarget = str.charAt(0);
                 yTarget = str.charAt(1);
             }while (!(p1.movePiece(new Point(x-'a',y-'1'),new Point(xTarget - 'a', yTarget - '1'))));
-            sc.close();
             p1.Afficher();
         }
+        
     }
 
     /*
